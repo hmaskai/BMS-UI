@@ -1,0 +1,47 @@
+<form>
+  <div class="form-group">
+    <label for="name">Company Name:</label>
+    <input type="text" class="form-control" id="name">
+  </div>
+  <div class="form-group">
+      <label for="address">Address:</label>
+      <textarea class="form-control" rows="5" id="address"></textarea>
+  </div>
+  <div class="form-group">
+      <label for="telephone">Telephone:</label>
+      <input type="text" class="form-control" id="telephone">
+  </div>
+  <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="text" class="form-control" id="email">
+  </div>
+  <div class="form-group">
+      <label for="panNo">PAN Number:</label>
+      <input type="text" class="form-control" id="panNo">
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Company Name</th>
+      <th>Address</th>
+      <th>Telephone</th>
+      <th>Email</th>
+      <th>PAN No.</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr 
+    *ngFor="let company of companies; index as i" >
+      <td>{{ i + 1 }}</td>
+      <td>{{ company.name }}</td>
+      <td>{{ company.address }}</td>
+      <td>{{ company.phoneNumber }}</td>
+      <td>{{ company.email }}</td>
+      <td>{{ company.panCardNumber }}</td>  
+    </tr>
+  </tbody>
+</table>
